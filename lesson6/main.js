@@ -1,5 +1,5 @@
 // The most basic FOR LOOP examples
-for (let i = 0; i < 10; i++) {
+/*for (let i = 0; i < 10; i++) {
   console.log("hello", i);
 }
 for (let i = 5; i < 10; i += 2) {
@@ -65,4 +65,37 @@ for (const employee of employees) {
 const cars = ["honda", "toyota", "ford", "chevy"];
 for (const car of cars) {
   console.log("--", car);
+}*/
+
+const employees = [
+  {
+    firstName: "kevin",
+    salary: 50000,
+  },
+  {
+    firstName: "sara",
+    salary: 54000,
+  },
+  {
+    firstName: "laurie",
+    salary: 52500,
+  },
+];
+
+let maxSalary = 0;
+let employeeNameWithMaxSalary = "";
+for (let i = 0; i < employees.length; i++) {
+  console.log("$$$", employees[i]);
+  if (employees[i].salary > maxSalary) {
+    maxSalary = employees[i].salary;
+    employeeNameWithMaxSalary = employees[i].firstName;
+  }
+}
+
+console.log("maxSalary", employeeNameWithMaxSalary, maxSalary);
+const minSalaryThreshHold = 52000;
+for (const currentEmployee of employees) {
+  if (currentEmployee.salary > minSalaryThreshHold) {
+    console.log("---", currentEmployee.firstName);
+  }
 }
