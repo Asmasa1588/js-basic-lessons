@@ -99,3 +99,37 @@ for (const currentEmployee of employees) {
     console.log("---", currentEmployee.firstName);
   }
 }
+/*let aveSalary = 0;
+let employeeNameWithAveSalary = "";
+for (let i = 0; i < employees.length; i++) {
+  console.log("$$$", employees[i]);
+  if (employees[i].salary > aveSalary) {
+    aveSalary = employees[i].salary;
+    employeeNameWithAveSalary = employees[i].firstName;
+  }
+}
+/*const aveSalary = 0;
+for (let i = 0; i < employees.length; i++) {
+  aveSalary += employees[i];
+}
+const avg = aveSalary / employees.length;
+//const salary = 0;
+const totalSalary = " ";
+for (const i = 0; i < employees.length; i++) {
+  totalSalary += employees[i];
+}
+const avg = totalSalary / employees.length;*/
+
+function calculateAverageEmployeeSalary(employees) {
+  let sum = 0;
+  for (let i = 0; i < employees.length; i++) {
+    console.log("employees[i]", employees[i].salary);
+    sum += employees[i].salary;
+  }
+  return sum / employees.length;
+}
+console.log(
+  "the result from function",
+  calculateAverageEmployeeSalary(employees)
+);
+// difference between LET and CONST ??
