@@ -67,6 +67,15 @@ console.log({ employeesWithLessData });
 //array of 5 numbers.
 // transform these numbers to their square root.
 //ex 25 & 100 ->  5  & 10
+Math.sqrt(25);
+Math.sqrt(100);
 
 // Array of 3 objects containing information about brands and colors(cars)
 // transform a new array includes all this info plus with the current date
+
+
+
+//August
+//week 2: 
+//week 3
+// week 4
