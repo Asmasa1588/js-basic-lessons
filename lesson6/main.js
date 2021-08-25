@@ -3,7 +3,7 @@
   console.log("hello", i);
 }
 for (let i = 5; i < 10; i += 2) {
-  console.log(" incremneting 1 by 2", i);
+  console.log(" incrementing 1 by 2", i);
 }
 const dogs = ["jupiter", "max", "denali", "watson"];
 for (let i = 0; i < dogs.length; i++) {

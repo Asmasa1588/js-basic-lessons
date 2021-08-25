@@ -99,3 +99,4 @@ const numberOfEvenNumbersUsingReduce = someNumbers.reduce(
   0
 );
 console.log({ numberOfEvenNumbersUsingReduce });
+

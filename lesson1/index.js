@@ -11,7 +11,7 @@ fetch("https://dog.ceo/api/breeds/image/random")
 // first time we use .json 
 // what are functions and how do we use them?
 // function expression, arrow function
-// what are the arrow functons?
+// what are the arrow functions?
 // difference b/w const and let?
 // js objects
 // what is document.getElementBy.
