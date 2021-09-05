@@ -228,5 +228,7 @@ const homeworkObject = {
   firstKey: 10,
   secondKey: 20,
 };
-for (const [keys, value] of Object.entries(homeworkObject)) console.log(keys);
+for (const [key] of Object.entries(homeworkObject)) {
+  console.log({ key });
+}
 console.log({ homeworkObject });
