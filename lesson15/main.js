@@ -91,10 +91,10 @@ console.log(objectTwo);
 // try to change each of the three objects and observe how the rest of the objects affect.
 
 let book1 = {
-    author:"James",
+  author: "James",
 };
 let book2 = {
-    author: "Kevin",
+  author: "Kevin",
 };
-let book3 = {...book1, ...book2}
-console.log(book3)
+let book3 = { ...book1, ...book2 };
+console.log(book3);

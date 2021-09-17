@@ -131,6 +131,47 @@ console.log(myAwesomeDog);
 
 //homework
 //create 3 objects, containing properties and values. then create a 4th object which is combing the previous 3
+//object cant have exactly the same properties/keys.
+const book1 = {
+  title1: "To kill a mockingbird",
+  author1: "Harper lee",
+  published1: "1960",
+};
+const book2 = {
+  title2: "Jane eyre",
+  author2: "charlotte bronte",
+  published2: "1847",
+};
+const book3 = {
+  title3: "The call of the wild",
+  author3: "jack London",
+  published3: "1903",
+};
+const fourthObjectCombinedAllBooks = {
+  ...book1,
+  ...book2,
+  ...book3,
+};
+console.log({ fourthObjectCombinedAllBooks });
+//const fourthObjectCombinedAllBooks = { ...book1, ...book2, ...book3 };
+console.log(book1, book2, book3);
+
+//ex homework
+const medicine = {
+  price: 50,
+};
+const patient = {
+  age: 30,
+};
+const location = {
+  country: "usa",
+};
+const allTogether = {
+  ...medicine,
+  ...patient,
+  ...location,
+};
+console.log(allTogether);
 
 //ex  spread operator for arrays
 
@@ -144,3 +185,57 @@ console.log(combinedArrays);
 // homework for spread operator: create 4 arrays of strings. combine all 4 into 1 new array
 //write down a function which can print out all the parameters which are passed to the function.
 //use Rest operator to for function
+
+const subwayOne = ["C"];
+const subwayTwo = ["DM", "Uptown"];
+const subwayThree = ["B"];
+const subwayFour = ["Downtown", "M"];
+const combinedSubways = [
+  ...subwayOne,
+  ...subwayTwo,
+  ...subwayThree,
+  ...subwayFour,
+];
+console.log(combinedSubways);
+/*const { salary, hiredDate, ...otherInformation } = employee;
+console.log(otherInformation);*/
+
+const restaurant = {
+  number1: "Italian",
+  number2: "Asian",
+  price: 50,
+};
+const { number1, number2, ...restOfTheObj } = restaurant;
+console.log(restOfTheObj);
+
+//ex homework
+
+const impossibleObject = {
+  title: "jupiter",
+  title: " gypsy",
+};
+console.log(impossibleObject.title);
+
+//more spread operator- in function
+
+const calculateAverage = (...numbers) => {
+  let sum = 0;
+  for (const currentNumber of numbers) {
+    sum = sum + currentNumber;
+    console.log("for of ", { sum, currentNumber });
+  }
+  return sum / numbers.length;
+};
+const someNumbers = [10, 11, 12, 11];
+console.log(calculateAverage(2, 5, 10));
+console.log(calculateAverage(2, 5, 10, 100, 200));
+
+console.log(calculateAverage(...someNumbers));
+console.log(
+  calculateAverage(
+    someNumbers[0],
+    someNumbers[1],
+    someNumbers[2],
+    someNumbers[3]
+  )
+);
