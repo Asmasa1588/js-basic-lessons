@@ -135,3 +135,8 @@ console.log(
 
 //homework
 //check the problem in the browser
+
+
+// masters: 1= $ 3000
+//BSC/BA: $7000 33000 300
+//2: 2000
