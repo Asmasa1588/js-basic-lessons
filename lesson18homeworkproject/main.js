@@ -1,5 +1,3 @@
-
-
 //ex
 const str = "05:25 AM";
 const separatedTime = str.split(" ");
@@ -40,12 +38,12 @@ const exampleInputFive = "10:00 PM";
 const expectedResultFive = "2200";
 
 //ex input 6:
-const exampleInputSix = "12:00 PM";
-const expectedResultSix = "1200";
+/*const exampleInputSix = "12:00 PM";
+const expectedResultSix = "1200";*/
 
 const convertToMilitaryTimeFormat = (normalTimeFormat) => {
   console.log("This is your input parameter", normalTimeFormat);
-  return " ";
+  return "0000 ";
 };
 
 console.log("Testing with 03:45 AM", convertToMilitaryTimeFormat("0345"));
@@ -55,3 +53,18 @@ console.log("Testing with 02:30 PM", convertToMilitaryTimeFormat("0230"));
 console.log("Testing with 10:00 PM", convertToMilitaryTimeFormat("2200"));
 console.log("Testing with 12:00 PM", convertToMilitaryTimeFormat("1200"));
 
+
+//Trial 1
+/*function convertToMilitaryTimeFormat(normalTimeFormat) {
+  if (exampleInputSix) {
+    return expectedResultSix;
+  }
+  return 0000;
+}*/
+//console.log(convertToMilitaryTimeFormat(expectedResultSix));
+
+//Trial 2
+
+const exampleInputSix = "12:00 PM";
+const expectedResultSix = exampleInputSix.replace("12:00 PM", "1200");
+console.log(expectedResultSix);
