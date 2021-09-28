@@ -27,7 +27,15 @@ console.log(catEmployee.yieldSalary(false));
 // is changing the THIS method
 
 const methodOutOfContext = catEmployee.yieldSalary;
-console.log(yourEmployeeSalary.bind(dogEmployee)(false));
+//const methodOutOfContext1 = catEmployee.name;
+//line 32: incorrect way to execute the function.
+console.log(methodOutOfContext(false));
+//line 34: the correct one, and we call this implicit way of setting
+console.log(catEmployee.yieldSalary(false));
+//line 36: this is explicit way to stetting this key word
+console.log(methodOutOfContext.bind(catEmployee)(false));
+//Alternative to BIND
+console.log(methodOutOfContext.call(catEmployee, false));
 
 //question: why did we use result w/o the this above?
 //THIS keyword only works when it being called over an object.
@@ -37,3 +45,42 @@ console.log(dogEmployee.yieldSalary.bind(catEmployee)(false));
 //homework
 //watch video.
 //next class. questions.
+
+//ex
+const someFunction = function (parameter1, parameter2) {
+  console.log({ parameter1, parameter2 });
+  console.log(this.numberOfFans);
+};
+const params = [47, "New York"];
+const obj = {
+  numberOfFans: 150,
+};
+someFunction.call(obj, "New York", 67);
+const singer = {
+  name: "ben king",
+  method: someFunction,
+  numberOfFans: 10000,
+};
+singer.method();
+
+//Homework
+//create a function which returns this.numberOne + this.numberTwo
+//create an object which will contain three properties.1st and second will be 'numberOne and numberTwo'.
+//the third property will 'sum' property, and that its value will be the Function from the first step.
+//use implicating binding to execute the 'sum' method
+//use explicit binding to execute the function form the  first step .by binding the function with an
+//object which contains two properties numberOne and numberTwo.
+//Disclaimer: numberOne and numberTwo will always be numbers(ex 3, 7 100).
+
+//to-do: explain the difference between arrow function and function expression
+
+const gameOfNumbers = function (number1, number2) {
+  console.log(number1, number2);
+};
+const someNumbers = {
+    numberOne: 12,
+    numberTwo: 100,
+    sum: 
+};
+const moreNumberGame = someNumbers.thisIsSomethingElse;
+console.log(moreNumberGame.bind(someNumbers))
