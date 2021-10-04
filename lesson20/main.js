@@ -68,19 +68,36 @@ singer.method();
 //create an object which will contain three properties.1st and second will be 'numberOne and numberTwo'.
 //the third property will 'sum' property, and that its value will be the Function from the first step.
 //use implicating binding to execute the 'sum' method
-//use explicit binding to execute the function form the  first step .by binding the function with an
+//use explicit binding to execute the function from the  first step .by binding the function with an
 //object which contains two properties numberOne and numberTwo.
 //Disclaimer: numberOne and numberTwo will always be numbers(ex 3, 7 100).
 
 //to-do: explain the difference between arrow function and function expression
-
-const gameOfNumbers = function (number1, number2) {
-  console.log(number1, number2);
+//trial 1
+// const someRandomNumbers = function (twoMoreNumbers) {
+//   return `${this.numberOne} and  ${this.numberTwo} `;
+// };
+// const someNumbers = {
+//   numberOne: 12,
+//   numberTwo: 100,
+//   sum: someRandomNumbers,
+// };
+// console.log(someNumbers.sum());
+//solved trial 1
+const someRandomNumbers = function (number3 = 100) {
+  console.log("this", this);
+  return this.numberOne + this.numberTwo + number3;
 };
 const someNumbers = {
-    numberOne: 12,
-    numberTwo: 100,
-    sum: 
+  numberOne: 12,
+  numberTwo: 100,
+  sum: someRandomNumbers,
 };
-const moreNumberGame = someNumbers.thisIsSomethingElse;
-console.log(moreNumberGame.bind(someNumbers))
+console.log(someNumbers.sum());
+
+const someNumbers1 = {
+  numberOne: 10,
+  numberTwo: 80,
+};
+console.log(someNumbers.sum.bind(someNumbers1)(1000));
+//console.log(someRandomNumbers.bind(someNumbers)());

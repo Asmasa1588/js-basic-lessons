@@ -61,32 +61,20 @@ const convertToMilitaryTimeFormat = (normalTimeFormat) => {
     //to do
     const convertedToPm = Number(hours) + 12;
     const pmNormalizeHour = convertedToPm === 24 ? 12 : convertedToPm;
-    convertedToPm
-    pmNormalizeHour
+    convertedToPm;
+    pmNormalizeHour;
     return `${pmNormalizeHour}${minutes}`;
   }
   return "invalid format";
 };
 
-// console.log("Testing with 03:45 AM", convertToMilitaryTimeFormat("03:45 AM")); //0345
-// console.log(
-//   "Testing with 08:00 AM---",
-//   convertToMilitaryTimeFormat("08:00 AM")
-// ); //0800
-//  console.log("Testing with 12:00 AM", convertToMilitaryTimeFormat("12:00 AM")); //0000
-// console.log("Testing with 02:30 PM", convertToMilitaryTimeFormat("02:30 PM")); //1430
-// console.log("Testing with 10:00 PM", convertToMilitaryTimeFormat("10:00 PM")); //2200
-// console.log("Testing with 12:00 PM", convertToMilitaryTimeFormat("12:00 PM")); //1200
- console.log("Testing with 11:00 AM", convertToMilitaryTimeFormat("11:00 AM"));//1100
-//solution
-
-//Trial 1
-/*function convertToMilitaryTimeFormat(normalTimeFormat) {
-  if (exampleInputSix) {
-    return expectedResultSix;
-  }
-  return 0000;
-}*/
-//console.log(convertToMilitaryTimeFormat(expectedResultSix));
-
-//Trial 2
+console.log("Testing with 03:45 AM", convertToMilitaryTimeFormat("03:45 AM")); //0345
+console.log(
+  "Testing with 08:00 AM---",
+  convertToMilitaryTimeFormat("08:00 AM")
+); //0800
+console.log("Testing with 12:00 AM", convertToMilitaryTimeFormat("12:00 AM")); //0000
+console.log("Testing with 02:30 PM", convertToMilitaryTimeFormat("02:30 PM")); //1430
+console.log("Testing with 10:00 PM", convertToMilitaryTimeFormat("10:00 PM")); //2200
+console.log("Testing with 12:00 PM", convertToMilitaryTimeFormat("12:00 PM")); //1200
+console.log("Testing with 11:00 AM", convertToMilitaryTimeFormat("11:00 AM")); //1100
