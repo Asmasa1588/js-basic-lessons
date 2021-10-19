@@ -73,3 +73,52 @@ const resolvingMyFavPet = async () => {
   }
 };
 resolvingMyFavPet();
+
+// Create a promise of an array containing objects.
+// Each object represents properties for an employee like name, salary, country and exc.
+
+// I want you log each employee from the promise.
+// Hint :
+// Use - Promise.resolve(employeesArray)
+
+const employeesArray = [
+  {
+    employeeDept: "Finance",
+    name: "John",
+    salary: 50000,
+    state: "PA",
+  },
+  {
+    employeeDept: "lab",
+    name: "Jessica",
+    salary: 58000,
+    state: "TX",
+  },
+  {
+    employeeDept: "Pay Roll",
+    name: "Kevin",
+    salary: 60000,
+    state: "NY",
+  },
+  {
+    employeeDept: "IT",
+    name: "Mike",
+    salary: 70000,
+    state: "CT",
+  },
+];
+
+
+const employeeData = (employee) => {
+  const employeeEntered = employeesArray.find((currentPet) => {
+    if (currentEmployee.employeeDept === employee) {
+      return true;
+    }
+    return false;
+  });
+  if (employeeDept) {
+    return Promise.resolve({
+      name: employeeDept.name,
+      state: employeeDept.state,
+    });
+  }
