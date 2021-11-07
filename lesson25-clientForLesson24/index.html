@@ -11,19 +11,19 @@
     <ul class="pets-list"></ul>
 
     <h2>New Pet</h2>
-    <form>
+    <form id="create-pet-form">
       <label>name</label>
-      <input />
+      <input name="name" />
       <br />
       <label>age</label>
-      <input type="number" />
+      <input type="number" name="age" />
       <br />
       <label>color</label>
-      <input />
-      <button id="create-new-pet" type="Submit" onclick="createNewPet(this)">
-        Create a new pet
-      </button>
+      <input name="color" />
+      <button id="create-new-pet" type="Submit">Create a new pet</button>
     </form>
     <script src="index.js"></script>
   </body>
 </html>
+
+

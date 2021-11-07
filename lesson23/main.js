@@ -122,3 +122,12 @@ const employeeData = (employee) => {
       state: employeeDept.state,
     });
   }
+
+
+//   const city = "New Jersey";
+// const country ="USA";
+// const living = " I live in" + + "city" + "in" + "country";
+
+let city ="nj";
+//  let country = "usa";
+let myPlace = `I live in ${city}`;
