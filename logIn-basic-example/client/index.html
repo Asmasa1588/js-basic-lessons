@@ -7,17 +7,41 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Log in system</h1>
-    <form id="login-form">
-      <label>User Name</label>
-      <input name="username" />
-      <br />
-      <br />
-      <label>Password</label>
-      <input name="password" />
-      <br />
-      <button type="submit" id="submit-button">Submit</button>
-    </form>
+    <div class="starting-page">
+      <button class="show-login-form">Login</button>
+      <button class="show-register-form">Register</button>
+    </div>
+    <div class="login-container">
+      <h1>Log in system</h1>
+      <form id="login-form">
+        <label>User Name</label>
+        <input name="username" />
+        <br />
+        <br />
+        <label>Password</label>
+        <input name="password" />
+        <br />
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+    </div>
+    <div class="register-container">
+      <h1>Register</h1>
+      <form id="register-form">
+        <label>Username</label>
+        <input name="username" />
+        <br />
+        <br />
+        <label>Password</label>
+        <input type="password" name="password" />
+        <br />
+        <br />
+        <label>Country</label>
+        <input name="country" />
+        <br />
+        <br />
+        <button id="register-submit-button" type="submit">Submit</button>
+      </form>
+    </div>
 
     <script src="index.js"></script>
   </body>

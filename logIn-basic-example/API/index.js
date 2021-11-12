@@ -8,19 +8,40 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 const port = 3001;
+const clientsInTheSystem = [
+  {
+    username: "happy-jupiter",
+    password: "1234",
+    country: "canada",
+    id: "1",
+  },
+  {
+    username: "gypsy",
+    password: "abcd",
+    country: "canada",
+    id: "2",
+  },
+];
 
-app.post("/", function (req, res) {
+app.post("/login", function (req, res) {
   const username = req.body.username;
   const password = req.body.password;
-  console.log(username, password,req.body);
+  console.log(username, password, req.body);
   // const token = jwt.sign(userLogInData, "shhhhh", {
-  //   expiresIn: 60,
-  // });
-  //   const token =
-  //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hc2EuanNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiY291bnRyeSI6InVzYSIsImlhdCI6MTYzNjE2NzY0OCwiZXhwIjoxNjM2MTY3NzA4fQ.E28QAJIvz8eIyiUTQH3Lwgpx6lnapPhrknsePhOgn2U";
-  //   const decoded = jwt.verify(token, "shhhhh");
-
-  res.send({ status: "successful login" });
+  const foundClient = clientsInTheSystem.find((currentClient) => {
+    return (
+      currentClient.username === username && currentClient.password === password
+    );
+  });
+  console.log({ foundClient });
+  if (foundClient) {
+    const { username, id, country } = foundClient;
+    const jwtPayLoad = { username, id, country };
+    const token = jwt.sign(jwtPayLoad, "secret");
+    res.send({ status: "successful login", token });
+  } else {
+    res.status(401).send({ status: "login fail" });
+  }
 });
 
 app.listen(port, () => {
