@@ -18,6 +18,24 @@ const registerClient = (event) => {
     password,
     country,
   });
+  fetch("http://localhost:3001/register", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      password,
+      country,
+    }),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      console.log(result);
+    });
 };
 
 document

@@ -44,6 +44,23 @@ app.post("/login", function (req, res) {
   }
 });
 
+app.post("/register", function (req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
+  const country = req.body.country;
+  console.log(username, password, country);
+  const lastClient = clientsInTheSystem[clientsInTheSystem.length - 1];
+  const idForTheNewClient = `${Number(lastClient.id) + 1}`;
+  const newClient = {
+    username,
+    password,
+    country,
+    id: idForTheNewClient,
+  };
+  clientsInTheSystem.push(newClient);
+  res.send({ status: "success" });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
